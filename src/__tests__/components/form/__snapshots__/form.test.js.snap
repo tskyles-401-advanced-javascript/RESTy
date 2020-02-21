@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    placeholder="URL"
+  />
+  <div
+    className="selectors"
+  >
+    <a
+      className="methods"
+      href="/#"
+      onClick={[Function]}
+      value="GET"
+    >
+      GET
+    </a>
+    <a
+      className="methods"
+      href="/#"
+      onClick={[Function]}
+      value="POST"
+    >
+      POST
+    </a>
+    <a
+      className="methods"
+      href="/#"
+      onClick={[Function]}
+      value="PUT"
+    >
+      PUT
+    </a>
+    <a
+      className="methods"
+      href="/#"
+      onClick={[Function]}
+      value="PATCH"
+    >
+      PATCH
+    </a>
+    <a
+      className="methods"
+      href="/#"
+      onClick={[Function]}
+      value="DELETE"
+    >
+      DELETE
+    </a>
+    <button>
+      Go!
+    </button>
+  </div>
+</form>
+`;
