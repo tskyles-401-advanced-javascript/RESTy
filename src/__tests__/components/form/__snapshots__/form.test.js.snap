@@ -2,6 +2,7 @@
 
 exports[`<Form /> renders correctly 1`] = `
 <form
+  id="urlForm"
   onSubmit={[Function]}
 >
   <input
@@ -13,7 +14,6 @@ exports[`<Form /> renders correctly 1`] = `
     <a
       className="methods"
       href="/#"
-      onClick={[Function]}
       value="GET"
     >
       GET
@@ -21,7 +21,6 @@ exports[`<Form /> renders correctly 1`] = `
     <a
       className="methods"
       href="/#"
-      onClick={[Function]}
       value="POST"
     >
       POST
@@ -29,7 +28,6 @@ exports[`<Form /> renders correctly 1`] = `
     <a
       className="methods"
       href="/#"
-      onClick={[Function]}
       value="PUT"
     >
       PUT
@@ -37,7 +35,6 @@ exports[`<Form /> renders correctly 1`] = `
     <a
       className="methods"
       href="/#"
-      onClick={[Function]}
       value="PATCH"
     >
       PATCH
@@ -45,7 +42,6 @@ exports[`<Form /> renders correctly 1`] = `
     <a
       className="methods"
       href="/#"
-      onClick={[Function]}
       value="DELETE"
     >
       DELETE
