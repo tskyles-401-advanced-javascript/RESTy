@@ -4,51 +4,37 @@ import "./form.scss";
 class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      method: "GET"
-    };
+    this.state = {};
   }
 
   handleSubmit = async e => {
     e.preventDefault();
 
     let url = e.target[0].value;
-    let method = this.state.method;
+    let method = this.props.method;
+    let body = this.props.body;
     console.log(url);
-    console.log(method);
+    console.log("method", method);
 
-    let raw = await this.props.fetchData(url, method);
-    let data = await raw.json();
-
-    let count = data.count;
-    let response = data;
-    let headers = {
-      "Content-type": raw.headers.get("Content-Type")
-    };
     let history = {
       url: url,
       method: method
     };
 
+    this.props.fetchData(url, method, body);
     this.props.saveHistory(history);
-    this.props.handleForm(count, response, headers);
-  };
-
-  handleMethodSelect = e => {
-    e.preventDefault();
-    this.setState({ method: e.target.text });
   };
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id="urlForm" onSubmit={this.handleSubmit}>
         <input placeholder="URL" />
         <div className="selectors">
           <a
             href="/#"
             className="methods"
             value="GET"
-            onClick={this.handleMethodSelect}
+            onClick={this.props.handleMethodSelect}
           >
             GET
           </a>
@@ -56,7 +42,7 @@ class Form extends React.Component {
             href="/#"
             className="methods"
             value="POST"
-            onClick={this.handleMethodSelect}
+            onClick={this.props.handleMethodSelect}
           >
             POST
           </a>
@@ -64,7 +50,7 @@ class Form extends React.Component {
             href="/#"
             className="methods"
             value="PUT"
-            onClick={this.handleMethodSelect}
+            onClick={this.props.handleMethodSelect}
           >
             PUT
           </a>
@@ -72,7 +58,7 @@ class Form extends React.Component {
             href="/#"
             className="methods"
             value="PATCH"
-            onClick={this.handleMethodSelect}
+            onClick={this.props.handleMethodSelect}
           >
             PATCH
           </a>
@@ -80,7 +66,7 @@ class Form extends React.Component {
             href="/#"
             className="methods"
             value="DELETE"
-            onClick={this.handleMethodSelect}
+            onClick={this.props.handleMethodSelect}
           >
             DELETE
           </a>

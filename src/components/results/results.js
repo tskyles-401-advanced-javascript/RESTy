@@ -1,6 +1,6 @@
 import React from "react";
 import ReactJson from "react-json-view";
-import { If, Then, Else } from "../conditionals/conditionals";
+import { If, Then } from "../conditionals/conditionals";
 import "./results.scss";
 
 const Results = props => {
