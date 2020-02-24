@@ -1,9 +1,13 @@
 import React from "react";
-import Results from "../results/results";
-import BodyInput from "../bodyInput/bodyInput";
 import AuthInput from "../authInput/authInput";
+import BodyInput from "../bodyInput/bodyInput";
+import Results from "../results/results";
 import "./homePage.scss";
+/**
 
+ * @param {*} props
+ * @description renders home page
+ */
 const HomePage = props => {
   return (
     <>

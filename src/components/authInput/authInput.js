@@ -1,6 +1,10 @@
 import React from "react";
 import "./authInput.scss";
+/**
 
+ * @param {*} props
+ * @description renders auth input forms
+ */
 const AuthInput = props => {
   return (
     <div>

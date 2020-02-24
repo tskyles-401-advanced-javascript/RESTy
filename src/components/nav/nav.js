@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./nav.scss";
-
+/**
+ *
+ *
+ * @param {*} props
+ * @description renders Nav bar
+ */
 const Nav = props => {
   return (
     <nav>

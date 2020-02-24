@@ -2,7 +2,12 @@ import React from "react";
 import ReactJson from "react-json-view";
 import { If, Then } from "../conditionals/conditionals";
 import "./results.scss";
-
+/**
+ *
+ *
+ * @param {*} props
+ * @description loads results of API fetch
+ */
 const Results = props => {
   return (
     <section>

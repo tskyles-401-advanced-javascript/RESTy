@@ -1,10 +1,15 @@
 import React from "react";
 import JSONInput from "react-json-editor-ajrm";
 import locale from "react-json-editor-ajrm/locale/en";
-import { If, Then, Else } from "../conditionals/conditionals";
-
+import { Else, If, Then } from "../conditionals/conditionals";
 import "./bodyInput.scss";
 
+/**
+ *
+ *
+ * @param {*} props
+ * @description renders body input form
+ */
 const BodyInput = props => {
   return (
     <div id="bodyInputContainer">

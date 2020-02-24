@@ -1,7 +1,11 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import "./history.scss";
+/**
 
+ * @param {*} props
+ * @description renders history page
+ */
 const History = props => {
   let history = useHistory();
   let items = props.history.map((item, i) => (

@@ -1,11 +1,16 @@
 import React from "react";
-import Form from "./components/form/form";
-import HomePage from "./components/homePage/homePage";
-import History from "./components/history/history";
-import Header from "./components/header/header";
-import "./styles.scss";
 import { BrowserRouter, Route } from "react-router-dom";
+import Form from "./components/form/form";
+import Header from "./components/header/header";
+import History from "./components/history/history";
+import HomePage from "./components/homePage/homePage";
+import "./styles.scss";
 
+/**
+ * @class App
+ * @extends {React.Component}
+ * @description Main component that renders all other components and contains state and functionality
+ */
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -15,28 +20,44 @@ class App extends React.Component {
       method: "GET"
     };
   }
-
+/**
+ * @memberof App
+ */
   handleMethodSelect = e => {
     e.preventDefault();
     this.setState({ method: e.target.text });
   };
-
+/**
+ * @memberof App
+ */
   handleForm = (count, results, header, method) => {
     this.setState((prevState, props) => {
       return { count, results, header, loading: false };
     });
   };
-
+/**
+ *
+ *
+ * @memberof App
+ */
   saveHistory = callObj => {
     this.setState((prevState, props) => {
       return { history: prevState.history.concat(callObj) };
     });
   };
-
+/**
+ *
+ *
+ * @memberof App
+ */
   getBodyData = body => {
     this.setState({ body: [body] });
   };
-
+/**
+ *
+ *
+ * @memberof App
+ */
   getFetchOptions = (method, body) => {
     let noBodyOptions = {
       method: method,
@@ -60,12 +81,20 @@ class App extends React.Component {
       return bodyOptions;
     }
   };
-
+/**
+ *
+ *
+ * @memberof App
+ */
   getTokenInfo = e => {
     e.preventDefault();
     this.setState({ auth: `Bearer ${e.target.value}` });
   };
-
+/**
+ *
+ *
+ * @memberof App
+ */
   getBasicInfo = e => {
     e.preventDefault();
     let input;
@@ -83,7 +112,11 @@ class App extends React.Component {
     input = `Basic ${encodedAuth}`;
     this.setState({ auth: input });
   };
-
+/**
+ *
+ *
+ * @memberof App
+ */
   fetchData = async (url, method, body) => {
     this.setState({ loading: true });
     let fetchOptions = this.getFetchOptions(method, body);

@@ -1,12 +1,20 @@
 import React from "react";
 import "./form.scss";
+/**
 
+ * @param {*} props
+ * @description renders form and handles submit
+ */
 class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
-
+/**
+ *
+ *
+ * @memberof Form
+ */
   handleSubmit = async e => {
     e.preventDefault();
 
