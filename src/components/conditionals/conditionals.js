@@ -22,16 +22,19 @@ const If = props =>
  *
  * @param {*} props
  */
+const Then = props => render(props.children, props.condition);
 /**
  *
  *
  * @param {*} props
  */
+const Else = props => render(props.children, !props.condition);
 /**
  *
  *
  * @param {*} props
  */
+const When = props => render(props.children, props.condition);
 /**
  *
  *
