@@ -6,9 +6,9 @@
 
 ### Links and Resources
 
-- [submission PR](http://xyz.com)
-- [travis](http://xyz.com)
-  <!-- * [front-end](http://xyz.com) (when applicable) -->
+- [submission PR](https://github.com/tskyles-401-advanced-javascript/RESTy/pull/1)
+- [travis](https://travis-ci.com/tskyles-401-advanced-javascript/RESTy)
+- [front-end](https://working.d2yx5do08djvpf.amplifyapp.com/)
 - [codesandbox.io](https://codesandbox.io/s/resty-41us7)
 
 ### Setup
