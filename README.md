@@ -1,7 +1,5 @@
-# LAB - 401-lab-29
-
 ## RESTy
-
+A basic API testing application. Allows you to perform restful actions on an api.
 ### Author: Travis Skyles
 
 ### Links and Resources
